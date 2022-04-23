@@ -1,0 +1,13 @@
+services:
+  apacheds:
+    image: inspectorgadget12/apacheds-docker:latest
+    tty: true
+    stdin_open: true
+    ports:
+     - 389:10389
+     - 636:10636
+    volumes:
+     - apacheds:/opt/apacheds/instances/default
+
+volumes:
+  apacheds:

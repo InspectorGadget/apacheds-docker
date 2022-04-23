@@ -13,27 +13,9 @@ services:
     stdin_open: true
     ports:
      - 389:10389
-     - 389:10636
+     - 636:10636
     volumes:
      - apacheds:/opt/apacheds/instances/default
-
-volumes:
-  apacheds:
-```
-
-OR
-
-```
-services:
-  apacheds:
-    image: inspectorgadget12/apacheds-docker:latest
-    tty: true
-    stdin_open: true
-    ports:
-     - 389:10389
-     - 389:10636
-    volumes:
-     - ./data:/opt/apacheds/instances/default
 
 volumes:
   apacheds:
